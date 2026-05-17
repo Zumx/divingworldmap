@@ -128,3 +128,11 @@ a { color: inherit; }
     border-radius: 14px 14px 0 0 !important;
   }
 }
+
+/* --- blog prose --- */
+.wm-prose h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--c-primary); margin: 2rem 0 0.7rem; }
+.wm-prose p { margin: 1rem 0; }
+.wm-prose a { color: var(--c-primary); text-decoration: underline; }
+.wm-prose ul, .wm-prose ol { margin: 1rem 0 1rem 1.4rem; }
+.wm-prose li { margin: 0.35rem 0; }
+.wm-prose strong { color: var(--c-ink); }

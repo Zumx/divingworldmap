@@ -26,6 +26,7 @@ export default function SiteNav() {
       <div style={{ display: 'flex', gap: '1.4rem', fontFamily: 'var(--font-sans)', fontSize: '0.92rem' }}>
         <Link href="/" style={{ color: 'rgba(255,255,255,0.82)', textDecoration: 'none' }}>Home</Link>
         <Link href="/map" style={{ color: 'rgba(255,255,255,0.82)', textDecoration: 'none' }}>Open map</Link>
+        <Link href="/blog" style={{ color: 'rgba(255,255,255,0.82)', textDecoration: 'none' }}>Blog</Link>
       </div>
     </nav>
   )
