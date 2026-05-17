@@ -76,6 +76,8 @@ export default function MapView({ features, onSelect, focus }: MapProps) {
       showCoverageOnHover: false,
       maxClusterRadius: 60,
       disableClusteringAtZoom: 11,
+      spiderfyOnMaxZoom: true,
+      zoomToBoundsOnClick: true,
       iconCreateFunction: clusterIcon,
     })
 
