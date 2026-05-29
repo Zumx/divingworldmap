@@ -1,0 +1,54 @@
+---
+title: "Dive Computers Explained"
+date: "2026-06-16"
+description: "How dive computers track depth, time and nitrogen loading, and how to choose one for your style of diving."
+excerpt: "How dive computers track depth, time and nitrogen loading, and how to choose one for your style of diving."
+---
+
+## The Computer Changed Recreational Diving
+
+Before the dive computer, divers planned their dives using printed tables — the US Navy Decompression Tables, later adapted by PADI into the Recreational Dive Planner. The tables work on the worst-case assumption that a dive is rectangular: the diver descends immediately to maximum depth and stays there until ascent. In practice no recreational dive looks like that. Divers ascend and descend, hover at varying depths, and spend the shallowest portion of the dive doing the safety stop at 5 metres. Tables cannot account for these actual depth profiles, so they build in conservatism that significantly reduces allowed bottom time.
+
+The dive computer changed this fundamentally by tracking actual depth continuously — typically sampling every few seconds — and calculating nitrogen loading in real time against a decompression model. Because a diver who spent 10 minutes at 30 metres and then ascended to 15 metres has absorbed less nitrogen than a diver who spent the full dive at 30 metres, the computer can award more no-decompression time. The result, for most real-world dive profiles, is meaningfully more bottom time compared with what the tables would allow.
+
+The other change the computer brought was eliminating computational error. A diver tired after several dives, trying to look up table values and apply surface interval adjustments correctly, makes mistakes. A computer makes no arithmetic errors.
+
+## How Decompression Models Work
+
+Every dive computer contains a decompression model — a mathematical representation of how nitrogen (and in some computers, helium) distributes through theoretical body compartments at different pressures. The Bühlmann ZHL-16 algorithm and its variants dominate modern recreational computers. The model divides the body into sixteen theoretical 'tissue compartments' with half-times ranging from five minutes to 635 minutes — representing fast-loading tissues like blood and nerve tissue through to slow tissues like bone and connective tissue.
+
+At any point during a dive, the computer calculates the nitrogen partial pressure in each compartment based on current depth, breathing gas, and elapsed time. It then calculates the maximum ambient pressure at which the gas in each compartment can safely come out of solution — the M-value, or maximum value — and the no-decompression limit is the time remaining before any compartment's nitrogen loading would exceed its M-value at the surface.
+
+Conservative algorithms apply gradient factors: they use M-values that are a percentage of the theoretical maximum, adding safety margin. A gradient factor of 40/85 means the algorithm begins issuing decompression warnings when tissues reach 40% of the theoretical M-value during the dive, and uses 85% of the surface M-value as the threshold for clearing at the surface. More conservative settings reduce bottom time but also reduce risk. Most recreational computers have fixed conservatism settings; higher-end models allow the diver to adjust gradient factors directly.
+
+## Types of Dive Computer
+
+Wrist computers are the dominant form: a watch-style device worn on the wrist that also functions as a dive computer. They range from entry-level models costing around $200 to sophisticated instruments over $1,000. The entry-level end of the market — Suunto Zoop, Cressi Leonardo, Mares Puck — offers solid decompression calculation, clear displays, and long battery life. They do not integrate with air pressure transmitters, so gas consumption must be tracked separately.
+
+Wireless air integration is the most significant feature step in the mid-range. A transmitter screws into the regulator first stage and sends cylinder pressure wirelessly to the computer. The computer can then display remaining pressure, calculate current gas consumption rate, and estimate remaining dive time based on gas, rather than just on no-decompression limits. When gas runs out before the NDL does — common at depth — the gas time is the binding constraint, and a computer that does not show you gas time requires you to track it separately with a pressure gauge and arithmetic.
+
+Console computers mount in a housing with the pressure gauge, presenting all information in a single instrument cluster. Many experienced divers prefer a wrist computer for the primary dive computer and retain a standalone pressure gauge as a backup, but console units remain popular particularly for newer divers who want everything in one place.
+
+Full-colour screen computers and heads-up display systems represent the high end. Shearwater's Perdix and Teric models are considered the reference standard for computers that bridge recreational and technical diving, with full Bühlmann ZHL-16C algorithms, adjustable gradient factors, gas switching capability for multiple dive gases, and screens readable in full sunlight. For a diver who intends to progress into nitrox diving, deeper diving, or eventually technical diving, starting with a computer that supports these features avoids an upgrade later.
+
+## Air Integration and Gas Management
+
+The case for air-integrated computers is strong for any diver who has not yet internalised a disciplined habit of checking the pressure gauge every few minutes. The computer's continuous display of cylinder pressure and remaining time means the diver always has that information in their visual field without any deliberate act. More importantly, the 'time to surface' figure — which accounts for ascent rate, safety stop, and current gas consumption — is a genuinely useful single metric that gives more actionable information than raw pressure alone.
+
+The limitation of wireless transmitters is battery life (the transmitters typically use CR2 or similar batteries that last one to two diving seasons), and the small but real possibility of wireless signal loss at range. For these reasons, keeping a pressure gauge in the console or on a submersible pressure gauge hose remains good practice even with air integration.
+
+## Dive Computer Disciplines and Habits
+
+Owning a dive computer does not make you safe. It is a tool that provides information; acting correctly on that information is the diver's responsibility. Specific disciplines matter.
+
+Never share a dive computer. The computer tracks nitrogen loading for the profile it has recorded. Two divers sharing a single computer across alternating dives will both have incorrect readings because the computer's nitrogen model will reflect a composite of two different dive profiles, neither of which matches either diver's actual loading.
+
+Service and replace batteries according to manufacturer schedules. A computer that fails mid-dive — either losing the display or locking in a failed state — leaves you dependent on your buddy's computer and your own rough knowledge of where you are in the no-decompression window. This is manageable but not ideal.
+
+Understand what your computer is telling you before you need the information under water. Read the manual. Practice navigating to the no-decompression time display, the ascent rate indicator, and the alarm acknowledgement procedure in a pool or shallow water before a multi-dive day on a reef.
+
+## Choosing a Computer
+
+The decision simplifies with clear criteria. If your diving is warm-water recreational reef diving at depths below 30 metres, any well-reviewed entry-level wrist computer will serve you reliably. If you plan to dive nitrox regularly, confirm the computer handles multiple gas setpoints — most mid-range units do. If you intend to dive deeper, do multi-dive days, or progress toward technical diving, invest in a quality mid-range computer with air integration and adjustable conservatism now rather than buying a cheap unit and upgrading in two years.
+
+[Open the map](/map) to find dive sites in your region, and take your dive computer knowledge into real dives where these algorithms earn their keep.
