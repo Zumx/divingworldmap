@@ -1,0 +1,52 @@
+---
+title: "Retoucher les Photos Sous-Marines"
+date: "2027-03-06"
+description: "Restituer les couleurs et le contraste perdus dans l'eau lors du traitement en post-production."
+excerpt: "Restituer les couleurs et le contraste perdus dans l'eau lors du traitement en post-production."
+---
+
+Une photo sous-marine brute sort de l'appareil avec une dominante bleue ou verte, des hautes lumières soufflées par les reflets de surface et des ombres qui avalent les détails dans lesquels se cachent les nudibranches et les crevettes de nettoyage. C'est l'état normal d'une image prise sous l'eau, et ce n'est pas un échec photographique — c'est le point de départ d'un traitement qui peut transformer un fichier RAW terne en une image qui restitue fidèlement ce que l'oeil du plongeur a perçu. La post-production sous-marine n'est pas de la manipulation ; c'est une correction de la physique de l'absorption lumineuse.
+
+## Comprendre pourquoi les couleurs disparaissent
+
+L'eau absorbe la lumière de manière sélective selon la longueur d'onde. Le rouge est absorbé dès les premiers mètres — à 5 mètres de fond, une étoile de mer rouge apparaît déjà brun-orange sur une image non traitée prise en lumière ambiante. L'orange disparaît vers 10-15 mètres, le jaune vers 20-25 mètres. Il ne reste que le bleu et le vert dans les eaux tropicales propres, et uniquement le vert dans les eaux riches en phytoplancton comme la Mer du Nord ou la Méditerranée côtière.
+
+Photographier en RAW est la première condition d'une bonne post-production. Le format JPEG compresse l'image en appliquant les réglages de l'appareil (balance des blancs, contraste, saturation) de manière irréversible. Le RAW préserve toutes les données du capteur, y compris les informations dans les hautes lumières et les ombres que le JPEG aurait détruites, et laisse une latitude de correction bien supérieure. Avec un fichier JPEG pris à 20 mètres sans flash, les rouges et les oranges ne sont tout simplement plus présents dans les données — on ne peut pas les récréer. Avec un RAW, ils sont sous-exposés mais présents, et la correction de la balance des blancs peut les faire ressortir.
+
+## Balance des blancs : la correction fondamentale
+
+La première étape du traitement d'une photo sous-marine en lumière ambiante est la correction de la balance des blancs. Dans Lightroom Classic ou Adobe Camera Raw, le curseur de température de couleur doit être poussé fortement vers le chaud — souvent entre 8 000 K et 12 000 K selon la profondeur et la clarté de l'eau — et le curseur de teinte (*tint*) déplacé vers le magenta pour neutraliser la dominante verte.
+
+L'outil de balance des blancs par point de référence (pipette) fonctionne si vous trouvez une zone neutre dans l'image — le blanc d'une coquille, une zone de sable fin, une partie de la combinaison blanche d'un plongeur. Cliquez sur cette zone et Lightroom ajuste automatiquement la balance des blancs pour la rendre neutre. Le résultat est souvent spectaculaire sur les images peu profondes, moins parfait en profondeur où les rouges ont effectivement disparu et où l'outil peut sur-corriger.
+
+## HSL et récupération sélective des couleurs
+
+Après la balance des blancs globale, les couleurs peuvent encore être déséquilibrées. Le panneau HSL (teinte, saturation, luminosité) permet des corrections sélectives. La saturation du rouge et de l'orange est souvent insuffisante après une correction de balance des blancs — monter leur saturation de 30 à 50 points redonne de la vie aux coraux, aux poissons de récif et à la peau des plongeurs. La teinte du rouge peut être légèrement déplacée vers l'orange pour rendre les coraux durs plus chaleureux.
+
+Dans les eaux vertes ou chargées en sédiments, la saturation du vert et du jaune est au contraire souvent excessive — réduire la saturation du vert de 20 à 30 points peut éviter que l'eau elle-même ne vire au jaune fluo artificiel après correction.
+
+## Clarté, texture et défloutage
+
+Les particules en suspension — plancton, sédiments, mucus de corail — créent un voile diffus sur les images sous-marines, surtout en arrière-plan. Le curseur de clarté dans Lightroom accentue le microcontraste et peut faire ressortir les textures de la peau des poissons ou les détails des coraux, mais il doit être utilisé avec modération sur les parties du sujet (3 à 8 points) pour ne pas créer un effet halo artificiel sur les bords.
+
+Le curseur de désbrume (*dehaze*) introduit dans Lightroom est particulièrement efficace pour les photos sous-marines : il détecte et réduit le voile diffus présent dans l'arrière-plan aquatique. Poussé à 15-25 %, il peut révéler des détails de récif en arrière-plan qui semblaient complètement noyés dans le bleu. Au-delà de 30 %, les couleurs commencent à virer à un look artificiel et les bruits numériques dans les ombres deviennent visibles.
+
+## Flash et lumière artificielle : des défis différents
+
+Les photos prises avec des flashs sous-marins — strobes de marques Ikelite, Inon, Sea & Sea ou Kraken — ont des problèmes différents de celles prises en lumière ambiante. Le backscatter, ces points blancs créés par les particules en suspension éclairées par le flash, est l'ennemi principal. En post-production, le pinceau de guérison (*healing brush*) peut éliminer les particules isolées, mais les zones denses de backscatter sont fastidieuses à traiter et mieux évitées à la prise de vue en orientant les flashs vers l'extérieur plutôt que directement vers le sujet.
+
+Les images au flash sous-marin ont souvent une balance des blancs déjà correcte au premier plan (éclairé par le flash) mais une arrière-fond encore bleu non éclairé. Ce gradient naturel est caractéristique de la photographie sous-marine avec flash et généralement jugé esthétique — le sujet ressort sur le fond bleu. Si vous cherchez un éclairage plus naturel, éclairer la scène avec un flux continu (lumière vidéo) plutôt qu'avec un flash permet une intégration plus homogène.
+
+## Bruit numérique aux hautes sensibilités
+
+En plongée nocturne ou en eaux sombres, les ISO élevés (1600 à 3200) génèrent du bruit numérique, particulièrement visible dans les zones sombres uniformes comme l'eau de fond. Le réducteur de bruit de Lightroom (luminance et couleur) ou le moteur de débruitage IA d'Adobe Camera Raw peut traiter ce bruit efficacement sur les fichiers RAW. Appliquez la réduction de bruit avant les autres corrections pour ne pas amplifier le bruit par les curseurs de clarté et de contraste appliqués par-dessus.
+
+## Calibration et profils d'appareil
+
+Certains photographes sous-marins créent des profils personnalisés pour leur appareil dans des conditions spécifiques — profil pour les eaux à 15 mètres dans la Méditerranée en juin, profil pour la mer Rouge en lumière ambiante — afin de commencer avec une base de correction plus proche du résultat final. Ces profils sont créés avec des logiciels comme DNG Profile Editor ou X-Rite ColorChecker Passport.
+
+Pour trouver les sites de plongée où vos compétences en photographie sous-marine seront mises à l'épreuve — des épaves aux récifs coralliens en passant par les sites de macro en Asie du Sud-Est — [ouvrez la carte](/map) et planifiez votre prochain voyage photographique subaquatique.
+
+## Développer un regard critique
+
+La meilleure façon de progresser en post-production sous-marine est de comparer systématiquement votre traitement avec le souvenir de ce que vous avez vu sous l'eau. L'objectif n'est pas de créer une image irréelle aux couleurs saturées à l'excès — c'est de restituer aussi fidèlement que possible l'expérience visuelle de la plongée. Les photos sous-marines les plus réussies sont souvent celles qui donnent à ceux qui ne plongent pas l'envie de mettre un masque.

@@ -1,0 +1,52 @@
+---
+title: "Unterwasserfotos bearbeiten: Farben und Kontrast zurückholen"
+date: "2027-03-06"
+description: "Wie man im Nachbearbeitungsprozess die vom Wasser verschluckten Farben und den Kontrast in Unterwasserfotografien wiederherstellt."
+excerpt: "Wie man im Nachbearbeitungsprozess die vom Wasser verschluckten Farben und den Kontrast in Unterwasserfotografien wiederherstellt."
+---
+
+## Was Wasser mit Licht macht
+
+Bevor man ein Unterwasserbild bearbeiten kann, muss man verstehen, warum es so aussieht, wie es aussieht. Wasser absorbiert Licht in Wellenlängen selektiv: Rot verschwindet ab etwa fünf Metern, Orange ab zehn, Gelb ab zwanzig. Was übrig bleibt, ist Blau und Grün. Das erklärt, warum unbearbeitete Unterwasserfotos fast immer einen starken Blau- oder Grünstich haben und warum rote Objekte – Korallenäste, Schwämme, Fische – grau oder braun wirken, obwohl sie in der Realität leuchten.
+
+Das zweite Problem ist Kontrast. Wasser streut Licht stärker als Luft. Schwebeteilchen – Plankton, organisches Material, Salzkristalle – sorgen für Helligkeitsgleichmäßigkeit und nehmen dabei Struktur und Tiefe aus dem Bild. Das Ergebnis ist ein flaches, milchiges Bild selbst bei guten Sichtverhältnissen.
+
+Das dritte Problem ist Schärfe. Unterwasserfokus ist schwieriger, Autofokussysteme brauchen unter Wasser länger, und Bewegungsunschärfe durch Strömung oder Subjekt ist häufig. Bearbeitungssoftware kann Schärfe verbessern, aber echte Unschärfe durch falsche Fokuspunkte lässt sich nicht retten.
+
+## RAW versus JPEG: Warum das Format entscheidet
+
+Wer Unterwasserfotos ernsthaft bearbeiten will, muss in RAW fotografieren. Ein JPEG-Bild ist bereits gerechnet: Die Kamera hat Farbanpassungen, Schärfung und Komprimierung vorgenommen. Was übrig bleibt, sind achttausend Farbnuancen pro Kanal – genug für einfache Bearbeitungen, aber zu wenig für aggressive Farbkorrekturen ohne Qualitätsverlust.
+
+Eine RAW-Datei enthält alle Sensor-Daten unbearbeitet: Tausende von Farb-Nuancen pro Kanal, korrigierbare Weißbalance ohne Qualitätsverlust, erholbare Lichter und Tiefen. Wer in einem schlecht belichteten Blaukanal-Bild versucht, rote Töne zurückzuholen, arbeitet mit JPEG oft gegen eine Dateigrenze – bei RAW hat man Spielraum.
+
+Kameras wie die Olympus OM System (ehemals Olympus, beliebtes System für Unterwasserfotografen), Sony RX100-Serie oder spiegellose Kameras mit Unterwassergehäuse wie Nauticam produzieren hervorragende RAW-Dateien. Selbst einfachere Action-Kameras wie GoPro Hero-Reihe produzieren heute RAW, wenn auch mit eingeschränktem Bearbeitungsspielraum.
+
+## Schritt 1: Weißbalance und Farbstich korrigieren
+
+Der erste Schritt in Lightroom, Capture One oder darktable ist die Weißbalance. Unter Wasser ohne Kunstlicht ist die Weißbalance extrem blau. Das Korrektur-Slider sollte in Richtung Warm (Orange) gezogen werden – manchmal dramatisch, bis 8000-10000 Kelvin, je nach Tiefe und Sichtbedingungen.
+
+Wer auf einen neutralgrauen oder neutralweißen Punkt im Bild klicken kann (graue Felsen, weißes T-Shirt, weißes Korallenkalkskelett), bekommt eine automatische Weißbalance-Ausgangskorrektur. Diese muss dann mit dem Auge nachjustiert werden.
+
+## Schritt 2: Kanäle und Farb-Mixer
+
+Nach der Weißbalance bleiben oft noch Farbprobleme, die global nicht zu lösen sind. Hier kommt der HSL-Regler oder Farb-Mixer ins Spiel. Rote und orangefarbene Töne, die durch die Wasserabsorption schwächer sind, können separat in Sättigung und Leuchtdichte angehoben werden. Grüne Töne, die oft dominieren, werden reduziert.
+
+In Adobe Lightroom gibt es dafür den Kalibrierungs-Tab: Durch Anpassung des Rotkanals im Primärfarbraum lassen sich rote Töne in den Mitteltönen stärken, ohne den Blaukanal zu destabilisieren.
+
+Wenn ein Bild externe Beleuchtung (Blitz oder Videoleuchte) hat, sind die beleuchteten Bereiche farbecht, während die Peripherie immer noch blaugrün ist. Hier arbeitet man mit Gradualfiltern oder Pinsel-Werkzeugen: Den Lichtkegel der Lampe separat bearbeiten und unberührt lassen; die Außenbereiche mit Weißbalance-Anpassung annähern.
+
+## Schritt 3: Kontrast, Dehaze und lokale Anpassungen
+
+Das Dehaze-Tool in Lightroom und Camera Raw ist spezifisch für Bilder mit Streulicht entwickelt worden. Unter Wasser, wo Partikelstreuung allgegenwärtig ist, kann Dehaze stark wirken – manchmal zu stark. Feinfühlig eingesetzt (Wert zwischen 20 und 40) entfernt es den Schleier und bringt Tiefenstruktur zurück.
+
+Kontrast-Anpassungen durch die Tonwertkurve sind präziser als der globale Kontrast-Slider. Eine klassische S-Kurve – Lichter anheben, Schatten absenken – bringt Struktur in Bilder ohne Kontrastverlust in den Extremwerten.
+
+Lokale Anpassungen mit dem Pinsel oder Graduierfilter erlauben, das Hauptmotiv separat vom Hintergrund zu bearbeiten. Ein Riffzacken im Vordergrund braucht andere Einstellungen als eine Fischschwarm zwanzig Meter dahinter.
+
+## Schritt 4: Schärfe und Rauschunterdrückung
+
+Unterwasserbilder sind oft verrauscht, weil Taucher mit höheren ISO-Werten fotografieren müssen, wenn Licht begrenzt ist. Moderne KI-basierte Rauschunterdrückung in Lightroom (Denoise), Topaz Photo AI oder ON1 Photo RAW kann bei RAW-Dateien Rauschen drastisch reduzieren, ohne Schärfe zu opfern.
+
+Schärfung sollte nach der Rauschunterdrückung erfolgen. Im Schärfungs-Tool die Maskierung (Masking) hochziehen, sodass nur die Kanten im Bild geschärft werden, nicht die Schwebepartikel im Wasser – sonst wird Wasserpartikelrauschen mitgeschärft.
+
+Bearbeite deine Unterwasserbilder, und nutze dann die [Karte](/map), um deine nächste Destination zu planen, wo Licht, Sichtweite und Motive eine gute Ausgangsbasis für das perfekte Bild bieten.

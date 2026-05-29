@@ -1,0 +1,60 @@
+---
+title: "Efterbearbetning av undervattensfoton"
+date: "2027-03-06"
+description: "Hur du återställer färger och kontrast som vatten tagit i efterbearbetningen."
+excerpt: "Hur du återställer färger och kontrast som vatten tagit i efterbearbetningen."
+---
+
+## Vad vatten gör med ljuset
+
+Vatten absorberar ljus selektivt beroende på våglängd. Rött ljus försvinner redan på tre till fem meters djup, orange vid sju till åtta meter, gult vid tio till femton meter. Blått och grönt ljus penetrerar djupast. Resultatet är det välkända problemet med undervattens­fotografi: bilder tagna på djupare vatten saknar allt värme och ser blå och platta ut, även om du stod bredvid ett glödande röd­korall.
+
+Dessutom minskar kontrasten med djupet. Partikulärt material i vattnet — plankton, suspension, sediment — sprider ljuset och sänker skärpan. Backscatter, vita prickar från partiklar som reflekterar blixten eller lampan direkt mot kameran, förstör annars skarpa bilder.
+
+Efterbearbetning löser inte alla dessa problem — en dålig bild i grumligt vatten kan inte räddas — men korrekt retuschering av välexponerade RAW-filer kan transformera en trist undervattensbild till en levande representation av vad du faktiskt såg.
+
+## RAW mot JPEG
+
+Allt börjar med att fotoformat. JPEG-filen är en komprimerad version med inbyggd bildbearbetning från kameran, och det finns begränsat utrymme för aggressiv efterbearbetning utan att introducer bildfel. RAW-filen innehåller sensorns rådata utan komprimering, och ger full frihet att korrigera exponering, vitbalans och färg­töner i efterhand.
+
+För seriös undervattens­fotografi är RAW obligatoriskt. Praktiskt taget alla systemkameror, de flesta kompaktkameror i dedikerade undervattenshus och många avancerade action-kameror erbjuder RAW. Utan det jobbar du med en handikappade råvara.
+
+## Vitbalans — första steget
+
+Det enklaste och kraftfullaste korrigeringsverktyget för undervattens­bilder är vitbalansen. I Adobe Lightroom eller Capture One justerar du temperaturen (Color Temperature) och nyansen (Tint) för att ta bort det blåa/gröna dominansen.
+
+För djupdyk­bilder utan externt ljus är temperaturen ofta för kall — 4 000–5 500 Kelvin mot de normala 6 500 K för dagsljus. Drag reglaget mot varmare ton­er, 6 000–7 500 K, och håll det naturliga. Tint justeras för att eliminera grönt cast, vanligt i kustvatten med hög alghalt.
+
+En praktisk metod är att använda ett grått kort i vattnet — en grå referensbild tagen i den specifika dykmiljön ger dig en exakt neutralpunkt att justera vitbalansen mot. Utan referenskort är det ett visuellt omdöme baserat på neutrala ytor i bilden, som sand­bottensfärg eller vita fiskar.
+
+## Kurvor och kontrast
+
+Undervattensfotografier saknar typiskt djupa svärtor. Histogrammet är sammanpressat mitt i tonen­kurvan och saknar värden vid extremerna. Korrigeringen är att dra kurvan: mörka partier (shadows) och svärtor sänks för att återskapa djupet i bilden, och högdagrarna lyfts varsamt.
+
+I Lightroom fungerar Clarity och Texture bra för att återge strukturen i korall och skalet, men var försiktig med för aggressiva inställningar — de introducerar halor runt kanten på djur och rev.
+
+Dehazing-reglaget (Ta bort dis) är kraftfullt för undervattensmiljöer med partiklar. Det ökar kontrasten och lokalt kontrast i ett slag. Risken är att det skapar ett artificiellt, hårt utseende om man driver det för långt — typiskt när man ser undervattensbilder som ser mer ut som digitala illustrationer än fotografier.
+
+## Färgkorrigering av rött och orange
+
+Den mest dramatiska transformationen är när du lyfter de röda och orangea kanalerna. I HSL-panelen (Hue, Saturation, Luminance) i Lightroom:
+
+Öka mättnaden i röd och orange. Röda och orangea koraller, fiskar som rödgruppers och guldfiskar, eldkorall — dessa färger är nästan försvunna i den råa bilden men lever i RAW-data om originalbelysningen var tillräcklig.
+
+Justera luminansen i blå och cyan nedåt för att mörkna vattenbackgrounden och öka kontrasten mot djuren i förgrunden.
+
+Om du fotograferade med externt ljus — undervattensblixtar eller videolampor — är balansen annorlunda. Det externa ljuset belyser förgrunden med korrekt spektrum medan bakgrunden behåller sin blå ton. Den naturliga kontrasten mellan varmt förgrund och blå bakgrund är en av de klassiska estetiska signaturer i undervattens­fotografi.
+
+## Backscatter
+
+Backscatter syns på bilden som vita prickar i bakgrunden — varje partikel som var mellan lampan och motivet och reflekterade ljuset tillbaka mot linsen. Bästa lösningen är preventiv: placera ljuskällan i en vinkel bort från kamerans optiska axel.
+
+I efterbearbetning kan du ta bort backscatter via Lightrooms Healing Brush eller Clone Stamp — men om det finns hundratals prickar är det ett tidskrävande arbete. Retuscherings­program med AI-baserade fyllning (Photoshops Generative Fill) gör jobbet snabbare men producerar ibland konstiga texturer i vattenbackgrunden.
+
+## Arbetsflöde och kalibrering
+
+Kalibrera skärmens färgprofil. En ej kalibrerad skärm ger ett falskt intryck av bildens färger, och det arbete du lägger ned på färg­balans ser annars ut på ett sätt på din skärm och ett annat på andras. ICC-profiler och hardware-kalibreringsenheter som Spyder eller X-Rite Colormunki löser detta.
+
+Spara i DNG- eller TIFF-format för arkivering av bearbetade filer, inte JPEG — varje JPEG-komprimering förstör lätt bearbetad bildinformation. Exportera till JPEG för webb och social medier.
+
+Utforska havs­miljöer att fotografera med [Öppna kartan](/map) och välj platser med tydlighet och marine-liv som ger dig bästa råmaterialet för efterbearbetning.

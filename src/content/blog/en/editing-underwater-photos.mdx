@@ -1,0 +1,60 @@
+---
+title: "Editing Underwater Photos"
+date: "2027-03-06"
+description: "Restoring colour and contrast lost to water in post-processing."
+excerpt: "Restoring colour and contrast lost to water in post-processing."
+---
+
+## What Happens to Colour Underwater
+
+Water is a selective filter. As light descends from the surface, the longer wavelengths — red, orange, and yellow — are absorbed progressively. Red is largely gone by 5 metres in clear tropical water, orange by about 10 metres, and yellow by 15 metres. What remains in ambient light below those depths is a palette dominated by blue and green. This is not a failure of your camera or lens; it is physics, and the photographic challenge of underwater imaging is entirely a consequence of this spectral stripping.
+
+The implication for post-processing is equally physical: the information that was never captured cannot be restored through editing alone. A photograph taken in ambient light at 20 metres without artificial illumination records no red channel data to speak of. Pushing the red slider in Lightroom or Photoshop on such an image creates a synthetic colour shift, not a restoration. The photograph will look warm but it will not look accurate, because the actual colours of the subject were never recorded.
+
+This is why artificial light — underwater strobes or video lights positioned close to the subject — is the only complete solution to the colour problem, and why post-processing of underwater images works best when the images were captured with at least some artificial fill light. Editing, at its most effective, is restoring and refining what was there; not inventing what was not.
+
+## RAW vs JPEG: Why It Matters Underwater
+
+The case for shooting RAW format is stronger in underwater photography than in almost any other context. A RAW file preserves the full bit depth of the sensor's capture — typically 14 bits per channel — which means the post-processing tools have real information to work with across the entire tonal and spectral range. JPEG files apply in-camera processing and compression that discard a large portion of this data, and the lost information includes precisely the detail in the shadow areas and colour channels that underwater editing requires.
+
+In practice, the difference between a RAW and JPEG edit is most apparent in the recovery of highlight detail in backlit subjects, the shadow lift required to bring detail out of a dark reef face, and the colour accuracy achievable in mid-range files. A well-exposed RAW file from a quality mirrorless camera — Sony RX100, Olympus TG-7, Nikon Z6 in an Ikelite or Nauticam housing — provides substantial latitude. An equivalently exposed JPEG from the same camera is workable but significantly more constrained.
+
+The trade-off is file size and processing time. On a ten-day liveaboard shooting five dives a day, a serious photographer can easily accumulate several thousand RAW files. Budget the storage and the processing time accordingly.
+
+## White Balance: The First Decision
+
+White balance is the most consequential single setting in underwater photography and the most powerful post-processing tool for existing images. Cameras default to auto white balance, which underwater almost always produces images with a strong blue or cyan cast. Correcting this in-camera through a custom white balance — pointing the camera at a white slate or sand in ambient light and setting the white balance to match — produces far better in-camera results than auto, particularly for video where post-processing white balance is more difficult.
+
+In post-processing RAW files, white balance is fully adjustable. The key tools are the colour temperature slider (Kelvin) and the tint slider. For images shot in the 0 to 10 metre range in tropical water, a starting point of around 7,000 to 9,000 K with slight magenta tint will shift the image toward a warmer, more naturalistic palette. Deeper images may need more aggressive correction — 10,000 to 12,000 K — and even then the red channel will need additional lifting through the HSL or Curves panels.
+
+The white balance that looks natural depends on depth, water clarity, geographic location, and time of day. Mediterranean water contains different dissolved organics than Red Sea water; Indonesian waters are frequently greener and siltier than Maldivian waters. There is no universal correct setting, and personal calibration through testing at your specific site is more reliable than any formula.
+
+## The RGB Curves: Targeted Colour Correction
+
+The Curves panel — available in Lightroom, Photoshop, and Capture One — allows independent manipulation of the red, green, and blue channels, and this is the most powerful tool for correcting the colour imbalance introduced by depth.
+
+The typical underwater image has a compressed red channel (the histogram piled at the left, indicating underexposure across the entire red range) and an inflated blue channel (the histogram pushed right). Lifting the red curve — pulling the midpoint and highlights upward — restores warmth and colour. Adding a slight S-curve to the blue channel — lifting shadows slightly while pulling the highlights down — reduces the cyan cast without flattening the overall image. The green channel usually needs less adjustment unless the water has a strong green or yellow-green colour cast.
+
+Working on curves requires a calibrated monitor and some experience reading colour. The alternative approach for less confident editors is the Hue/Saturation/Luminance panel, where individual colour ranges — blues, cyans, magentas — can be desaturated or shifted independently. Reducing the saturation of blues and cyans by 20 to 30 points in a blue-heavy image will not restore natural colour but will produce a more neutral, acceptable result as a starting point.
+
+## Dealing with Backscatter
+
+Backscatter — the white specks caused by suspended particles in the water illuminated by the strobe or light — is the endemic problem of underwater photography and is best dealt with at the capture stage rather than in post. Moving the strobes away from the lens axis reduces the proportion of particles illuminated along the line of sight, and this physics cannot be reversed in Lightroom.
+
+When backscatter exists in an image, the Healing Brush or Clone Stamp in Photoshop, or the Spot Removal tool in Lightroom, addresses it particle by particle. On lightly scattered images this is a few minutes of work. On heavily scattered images it is genuinely tedious. There are AI-based tools — including plugins for Lightroom and standalone applications — that identify and remove backscatter automatically with reasonable success on moderate scatter. They struggle with heavy scatter in complex backgrounds.
+
+The other approach is to use the Noise Reduction and Texture sliders aggressively enough to blend scattered particles into the background, then sharpen only the subject using a mask. This works in blue-water images where the background is relatively featureless but fails on reef images where sharpness in the background is part of the image.
+
+## Contrast, Clarity, and the Wet Look
+
+Underwater images often look flat — low contrast, low micro-contrast, slightly veiled. This is a combined effect of light scattering through water, the absorption that reduces colour saturation, and the absence of the hard shadows that give terrestrial photographs their sense of depth.
+
+The Contrast and Clarity sliders in Lightroom address different aspects of this. Contrast adjusts the overall tonal range — pushing brights up and darks down — while Clarity (called Structure in some software) enhances mid-tone edge contrast, the micro-contrast that makes textures and detail read clearly. For underwater images, a moderate Clarity boost — 15 to 30 points — is often more useful than a large Contrast move, because it recovers the appearance of three-dimensional texture in coral, fish skin, and sand without blowing highlights.
+
+The Dehaze slider, designed originally to penetrate atmospheric haze in landscape photography, works in underwater images for a similar reason — water scattering has optical similarities to atmospheric haze. Applied modestly — 10 to 20 points — it increases local contrast and colour saturation simultaneously. Applied too aggressively it creates artefacts, particularly in blue channels.
+
+## A Practical Workflow
+
+A reliable starting sequence for a mid-water reef image shot in RAW with ambient light and one strobe on a 5mm arm: set white balance to 8,500 K, plus 15 on the tint slider; lift the exposure by 0.5 stops; add 20 Clarity; lift the red curve midpoint, lower the blue curve highlight; reduce the saturation of cyans and blues by 25 each; local adjust the subject to increase sharpness and add a targeted lift to shadow detail. The whole operation runs five minutes on a typical image once the sequence is familiar.
+
+[Open the map](/map) to explore the dive sites where the specific water conditions — depth, clarity, colour temperature — will determine which of these editing approaches applies to your photographs before you even get in the water.

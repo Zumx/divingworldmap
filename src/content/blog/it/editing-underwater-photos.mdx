@@ -1,0 +1,56 @@
+---
+title: "Editing delle Fotografie Subacquee"
+date: "2027-03-06"
+description: "Come recuperare colore e contrasto persi nell'acqua durante la post-produzione."
+excerpt: "Come recuperare colore e contrasto persi nell'acqua durante la post-produzione."
+---
+
+## Perché le foto subacquee sembrano sbagliate
+
+L'acqua assorbe la luce selettivamente per lunghezza d'onda. Il rosso viene assorbito quasi completamente entro i primi 5 metri; l'arancione scompare entro i 15; il giallo si indebolisce a 20-25 metri. Sotto quella soglia, il mondo è prevalentemente blu e verde. Una barriera corallina a 20 metri di profondità, fotografata senza luce artificiale, appare cianea e piatta anche se i tuoi occhi — che si adattano continuamente al bilanciamento del bianco — la vedono ricca di colori.
+
+Il risultato è che quasi tutte le foto subacquee scattate senza strobo o video light hanno bisogno di lavoro in post-produzione per riflettere ciò che l'occhio umano percepisce, o per creare un'immagine intenzionalmente più vivida di quello che era la realtà fisica. I fotografi subacquei esperti sanno già al momento dello scatto come sarà la foto nell'editor, e compongono tenendo conto di quello che il software può recuperare.
+
+## Formato RAW: il punto di partenza
+
+Fotografare in RAW — invece che in JPEG — non è un optional per chiunque voglia fare editing serio. Un file RAW contiene l'intera informazione raccolta dal sensore, circa 12-14 bit per canale; un JPEG comprime e scarta informazione al momento dello scatto, lasciando meno margine di manovra. La differenza è più pronunciata sott'acqua di quanto non sia in superficie: il range dinamico limitato che si ottiene con una dominante colore forte richiede tutta la profondità di bit possibile per recuperare i dettagli.
+
+Il formato RAW di Canon si chiama CR3, quello di Nikon NEF, quello di Sony ARW. Le fotocamere compatte usate in housing subacqueo — come la Sony RX100 o la Canon G7X — supportano il RAW nelle versioni più recenti. Le action cam come GoPro hanno introdotto il RAW solo nelle versioni più recenti; prima di quella soglia, si lavora comunque con JPEG, con risultati inferiori ma non inutili.
+
+## Il bilanciamento del bianco: la prima decisione
+
+Il bilanciamento del bianco automatico delle fotocamere in acqua cerca di correggere la dominante blu-verde ma lo fa con approssimazione. In post-produzione, il cursore del bilanciamento del bianco (temperatura colore + tinta) è la prima cosa su cui intervenire.
+
+Per una foto scattata a 10 metri senza luce artificiale, spostare la temperatura verso il "caldo" — aumentando i Kelvin nel cursore di Lightroom o Camera Raw — recupera i rossi persi dall'assorbimento dell'acqua. La direzione del cursore tinta (da verde verso magenta) compensa la dominante verde delle acque costiere ricche di fitoplancton.
+
+Il metodo manuale più affidabile è usare un punto di riferimento bianco nell'immagine: se nell'inquadratura c'è una superficie che sai essere bianca — un pesce bianco, una parte chiara del substrato — puoi cliccarci sopra con lo strumento contagocce per impostare il bilanciamento del bianco automaticamente.
+
+## Lightroom: il flusso di lavoro pratico
+
+La maggior parte dei fotografi subacquei lavora in Adobe Lightroom Classic per la semplicità del flusso di lavoro non distruttivo. Un flusso tipico per una foto di barriera corallina a media profondità:
+
+Iniziare con l'esposizione: spesso le foto subacquee senza flash sono sottoesposte, e il cursore Exposure va alzato di uno-due stop. Poi le luci e le ombre: abbassare le luci per recuperare i dettagli nelle aree più luminose (bollorescenza delle bolle, aperture dei coralli illuminati dalla luce diffusa) e alzare le ombre per portare fuori i dettagli nelle aree scure. Il cursore Bianchi e Neri imposta i punti estremi del range tonale.
+
+Il pannello HSL — tonalità, saturazione e luminosità per singoli colori — è dove si recuperano i rossi e gli arancioni. Alzare la saturazione del rosso di 40-60 punti può sembrare brutale, ma se il rosso è quasi assente nella foto originale, è spesso necessario. La tonalità del rosso va spostata verso l'arancione per evitare che i colori recuperati sembrino artificiali.
+
+La chiarezza — che aumenta il contrasto dei medi toni — va usata con moderazione sulle texture dei coralli e delle rocce, con più cautela sui soggetti con pelle (pesci, tartarughe) dove crea effetti indesiderati.
+
+## Photoshop: strumenti avanzati
+
+Lightroom gestisce bene le correzioni globali; Photoshop consente interventi locali più precisi. Il filtro Camera Raw in Photoshop ha le stesse funzioni di Lightroom, ma accessibili come livello non distruttivo. I livelli di regolazione — Curve, Bilanciamento del Colore, Tonalità/Saturazione — con maschere di livello permettono di correggere zone specifiche dell'immagine senza influenzare il resto.
+
+La tecnica più usata dai fotografi subacquei avanzati è il layer di Curve con maschera: aumentare il rosso nella curva per tutto il frame tende a far sembrare i pesci bianchi o gialli con una dominante rossastra. Una maschera limitata alle zone blu-verdi del fondale lascia invariati i soggetti già bilanciati dalla luce dello strobo.
+
+Il filtro Color Range — che seleziona i pixel per tonalità in un range definito — permette di isolare il blu del fondo e alzarne la saturazione separatamente, o viceversa di desaturarlo leggermente per aumentare il contrasto con i colori del reef. [Apri la mappa](/map) per trovare siti fotografici dove la luce e la vita marina offrono le materie prime migliori per le tue immagini.
+
+## Luci artificiali e correzione in post
+
+Se usi uno strobo o una video light, il flusso di lavoro cambia. L'area illuminata dalla luce artificiale sarà bilanciata (o sovraesposta), mentre il fondo blu non illuminato resta dominato dall'assorbimento dell'acqua. Il risultato classico è un soggetto ben illuminato su un fondo blu spento.
+
+In questo caso, l'obiettivo è portare il fondo blu verso una tonalità più accettabile senza sovraesporre il soggetto. Una correzione locale — con il pennello di regolazione di Lightroom o con una maschera in Photoshop — limitata al fondo aumenta l'esposizione e la saturazione del blu o del verde solo dove serve. L'uso dei profili di colore delle fotocamere — disponibili in Lightroom per i principali produttori — aiuta a partire da una base più accurata in termini di resa cromatica.
+
+## Correggere senza falsificare
+
+L'editing subacqueo ha un problema estetico che vale la pena nominare: è facile esagerare. Una foto con i rossi alzati eccessivamente, le ombre scavate al nero puro e la chiarezza al massimo sembra surreale e artefatta, anche se tecnicamente "corretta". I migliori fotografi subacquei sviluppano un senso per la misura: l'immagine finale deve sembrare una fotografia, non una simulazione digitale di un fondale marino.
+
+Il test pratico: mostrare la foto a qualcuno che non era sott'acqua con te. Se dice "sembra reale" è un buon segno; se dice "sembra una foto di un acquario in steroidi", si è esagerato. Il calibro del monitor è importante: lavorare su uno schermo non calibrato porta a correzioni eccessive che poi appaiono diverse su altri dispositivi.
