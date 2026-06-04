@@ -3080,3 +3080,82 @@ a {
     transition: none;
   }
 }
+
+/* ============================================================
+   LocationCard + map controls + a11y pass
+   ============================================================ */
+
+/* Custom Leaflet controls: locate-me + fullscreen (stacked under the zoom
+   control). They reuse Leaflet's .leaflet-bar chrome; we only center the icon
+   and add a busy state. Dark-mode colours come from the .leaflet-bar overrides
+   in the dark media query above. */
+.map-extra-ctrl a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+}
+.map-extra-ctrl a:hover {
+  color: var(--accent);
+}
+.map-extra-ctrl a.is-busy {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Wikipedia categories as clickable tags in the LocationCard. */
+.loc-categories {
+  margin-top: 14px;
+}
+.loc-cat-heading {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--card-muted);
+  margin-bottom: 8px;
+}
+.loc-cat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.loc-cat {
+  font-size: 12px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--card-text);
+  background: var(--card-elev);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 11px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.loc-cat:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Accessibility: a guaranteed visible focus ring on form controls whose own
+   :focus rules clear the native outline (these come last, so they win on equal
+   specificity). Keyboard-only via :focus-visible, so mouse users never see it. */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.search-input:focus-visible,
+.map-search-input:focus-visible,
+.blog-search-input:focus-visible,
+.signup-form input:focus-visible,
+.map-filter-field select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* The CartoDB DarkMatter scale bar text/border needs lightening. */
+  .leaflet-control-scale-line {
+    background: rgba(30, 32, 39, 0.7) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+}
