@@ -4,6 +4,7 @@
   "emoji": "🤿",
   "domain": "divingworldmap.com",
   "contactEmail": "hello@divingworldmap.com",
+  "ga4Id": null,
   "colors": {
     "primary": "#5f5b54",
     "accent": "#b8af9c"
