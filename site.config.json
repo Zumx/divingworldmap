@@ -27,7 +27,10 @@
   "affiliateUrl": "https://www.getyourguide.com/s/?q={q}",
   "ctaType": "tour",
   "metaFields": [],
-  "aboutText": null,
+  "aboutText": [
+    "Diving World Map collects dive sites across the world's seas, lakes and quarries — reefs and wrecks, walls and drift dives, training spots and bucket-list descents — into one browsable map.",
+    "Sites are drawn from OpenStreetMap's `sport=scuba_diving` tag and added by divers. Conditions, depth, currents and the need for a guide vary enormously, so always dive within your training and check with a local operator first."
+  ],
   "locales": [
     "en",
     "de",
