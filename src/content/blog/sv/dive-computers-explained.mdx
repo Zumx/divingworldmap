@@ -7,48 +7,58 @@ excerpt: "Hur dykatorer spårar djup, tid och kvävemättnad, och hur du väljer
 
 ## Från tabeller till algoritmer
 
-Dykare använde länge Bühlmann-tabeller och US Navy-tabeller för att beräkna säkra bottentider och ytvilor. Tabellerna är konservativa och exakta nog — men de behandlar varje dyk som om det gjordes på exakt planerat djup under exakt planerad tid. Verkligheten är mer komplex: dykare rör sig upp och ned under ett dyk, tillbringar mer tid på grundare vatten, återvänder från djupet med gasbelastning som är specifik för just det mönstret.
+Dykare använde länge Bühlmann-tabeller och US Navy-tabeller för att beräkna säkra bottentider och ytvilor. Tabellerna är konservativa och tillräckligt exakta — men de behandlar varje dyk som om det gjordes på exakt planerat djup under exakt planerad tid. Verkligheten är mer komplex: dykare rör sig upp och ned under ett dyk, tillbringar mer tid på grundare vatten och återvänder från djupet med en gasbelastning som är specifik för just det mönstret.
 
-En dykator gör beräkningarna i realtid. Den mäter faktiskt djup varje sekund, beräknar kväveabsorptionen löpande baserat på kroppsvävnadernas teoretiska halveringstider och levererar en kontinuerligt uppdaterad no-decompression limit (NDL) för nuvaranda djupet. Resultatet är ett mer exakt, vanligtvis mer frikostigt och alltid mer situationsspecifikt svar än vad tabeller ger.
+En dykator gör beräkningarna i realtid. Den mäter faktiskt djup varje sekund, beräknar kväveabsorptionen löpande baserat på kroppsvävnadernas teoretiska halveringstider och levererar en kontinuerligt uppdaterad no-decompression limit (NDL) för nuvarande djupet. Resultatet är ett mer exakt, vanligtvis mer frikostigt och alltid mer situationsspecifikt svar än vad tabeller ger — och en omedelbar varning om du håller på att nå gränsen.
 
 ## Hur algoritmen fungerar
 
-De flesta dykatorer baseras på Bühlmann ZHL-serien, med 16 olika teoretiska vävnadskompartment med halveringstider från 4 minuter till 635 minuter. Varje kompartment representerar en typ av biologisk vävnad: snabba kompartment modellerar högt genomblödda vävnader som blod och hjärna, långsamma modellerar fett och ben.
+De flesta dykatorer baseras på Bühlmann ZHL-16-serien, med 16 olika teoretiska vävnadskompartment och halveringstider från 4 minuter till 635 minuter. Varje kompartment representerar en typ av biologisk vävnad: snabba kompartment modellerar högt genomblödda vävnader som blod och hjärna, långsamma kompartment modellerar fett och ben. Snabba vävnader tar upp och avger kväve snabbt; långsamma vävnader absorberar kvävet sakta men håller kvar det länge efter ett djupt dyk — vilket är anledningen till att upprepade dyk nästa dag kräver extra försiktighet.
 
-Algoritmen beräknar hur mycket kväve varje kompartment har absorberat och hur nära det är att nå det tillstånd som genererar en dekompressionsobligatus. Konservativitetsfaktorn — det vill säga hur stor marginal som byggs in mot gränsvärdet — varierar mellan tillverkare och modeller. Shearwater-datorer låter dykaren justera Bühlmann-gradientfaktorerna manuellt, ett verktyg som är mycket använt av tekniska dykare men som kräver förståelse för att hantera korrekt.
+En vidareutveckling av Bühlmann-modellen är RGBM (Reduced Gradient Bubble Model), som försöker ta hänsyn till bildningen av mikroskopiska bubblor i vävnaderna — något som den ursprungliga modellen inte beaktade. Suunto implementerar varianter av RGBM i sina dykatorer; Shearwater och Scubapro använder modifierade Bühlmann-algoritmer med justerbara gradientfaktorer.
 
-## Typer av dykatorer
+Gradientfaktorn (GF) är ett centralt verktyg i moderna tekniska dykatorer. GF Low bestämmer på vilket djup det första dekompressionsstoppet börjar; GF High bestämmer hur nära M-värdet (maximalt tillåten övermättnad) man tillåter sig komma vid den sista uppstigningen. Shearwater-datorer — som Perdix och Teric — låter dykaren justera dessa värden manuellt, ett kraftfullt verktyg som kräver förståelse för att användas rätt. Fritidsdykare lämnar dem på tillverkarens standardinställningar.
 
-Pulsmätaren på handleden är den dominerande formen idag, men det finns tydliga varianter att välja mellan.
+## Typer av dykatorer och formfaktorer
 
-Air integrated-datorer kopplas trådlöst eller via slang till tanken och visar kvarvarande gas i realtid bredvid NDL och djup. Fördelen är ett kompaktare informationsflöde — allt på ett ställe. Nackdelen är att ett elektriskt fel eller paketfel kan lämna dig utan tankavläsning.
+Handledsdatorn är den dominerande formen idag. Den bärs som ett armbandsur, är lättillgänglig under dyket och kan användas ovan vatten för träning och planering. Modeller som Suunto D5, Garmin Descent Mk3i och Shearwater Peregrine eller TERIC erbjuder färgdisplayer med hög kontrast, flera dagars batteritid i dykläge och Bluetooth-anslutning för att ladda ned loggdata.
 
-Wrist computers utan luftintegration kräver ett separat djup- och manometerpar men har inga kopplingsrisker. De är vanligtvis billigare och enklare.
+Air integrated-datorer kopplas till tanken via en trådlös sändare monterad på första steget, och visar kvarvarande gas i realtid bredvid NDL och djup. Det innebär att datorn kan beräkna hur många minuter gas du har kvar på det aktuella djupet — betydligt mer användbar information än enbart trycket i bar. Modeller som Shearwater Perdix AI, Garmin Descent Mk3i och Mares Quad Air stöder denna funktion. Nackdelen är att ett elektroniskt fel i sändaren lämnar dig utan tankavläsning; erfarna dykare bär alltså ofta ett reservmanometer trots luftintegration.
 
-Dykatorer med heltäckandetumavtryck (HUD, Heads-Up Display) monteras i masken och ger information direkt i synfältet, utan att behöva titta ner på handleden. Spora är en leverantör i det segmentet.
+Dykatorer utan luftintegration kräver ett separat manometer men är generellt billigare, enklare och har färre kopplingspunkter som kan ge fel. De är ett utmärkt val för den som dyk sällan eller på platser där serviceverkstäder inte finns i närheten.
 
-Datorbaserade dykplanerare som fungerar tillsammans med dykatorn är vanliga i teknisk dykning: du planerar dyket på en laptop, överför profilen till datorn, och datorn varnar dig om du avviker från planen.
+HUD-datorer (Heads-Up Display) monteras i masken och projicerar NDL, djup och varningar direkt i synfältet utan att dykaren behöver titta ner. Datorplanerade dykprofiler — där du planerar dyket på en bärbar dator och överför profilen till datorn — är vanliga inom teknisk dykning, där exakta dekompressionsstopp planeras i förväg.
 
-## Syre- och nitroxhantering
+## Syrgas, nitrox och höjdanpassning
 
-Dykatorer avsedda för nitroxdykning låter dykaren ange syrgasandelen i gasblandningen. Datorn justerar sedan sina beräkningar för att säkerställa att syrgaspartialtrycket aldrig överstiger inställt maxvärde (vanligtvis 1,4 bar vid botten, 1,6 bar vid dekompressionstopp). Om du ändrar gasblandning och glömmer att uppdatera datorn, kan den visa en NDL som är längre än säker med den faktiska gasen — ett farligt scenarie.
+Dykatorer avsedda för nitroxdykning låter dykaren ange syrgasandelen i gasblandningen. Med EAN32 (32 % syrgas) på 25 meters djup kan NDL nå 50 minuter jämfört med ungefär 35 minuter med vanlig luft. Datorn justerar beräkningarna och bevakar även att syrgaspartialtrycket (ppO₂) inte överstiger inställt maxvärde — vanligtvis 1,4 bar som operativt tak och 1,6 bar som absolut nödgräns. Konvulsionsrisk vid syrgastoxicitet är verklig vid höga partialtryck.
+
+Om du glömmer att uppdatera nitroxinställningen efter ett flaskkyte — till exempel om du byter från EAN32 till EAN36 — kan datorn visa en NDL som är längre än vad som är säkert med den faktiska gasen. Det är ett av de vanligaste användarmisstagena med moderna dykatorer.
+
+Höjdanpassning är kritisk vid dykning i bergsjöar. Vid 2 000 meters höjd är lufttrycket cirka 0,8 bar istället för 1 bar vid havsytan. En dator som inte är inställd för höjd tolkar det lägre omgivningstrycket felaktigt och beräknar NDL-värden som inte stämmer med den faktiska fysiologin. Alpsjöar i Schweiz, Österrike och norra Italien — populära träningsmål — berörs alla av detta.
 
 ## Att välja en dykator
 
-Frågan är aldrig 'vilken är bäst' utan 'vilken passar min typ av dykning.'
+Frågan är aldrig "vilken är bäst" utan "vilken passar min typ av dykning".
 
-En semesterdykare som gör tre till fyra dyk per dag på ett tropiskt rev behöver en enkel, pålitlig dator med god skärm i direkt solljus. Garmin Descent, Suunto D5 och Shearwater Peregrine är populära alternativ med olika prisklass och funktionsuppsättning. Suunto är ett etablerat finskt märke med lång historia inom dykning; Shearwater är ett kanadensiskt företag som dominerar teknisk dykning med sina mer konfigurerbara modeller Teric och Perdix.
+En semesterdykare som gör tre till fyra dyk om dagen på ett tropiskt rev behöver en enkel, pålitlig dator med god läsbarhet i direkt solljus. Garmin Descent, Suunto D5 och Shearwater Peregrine är populära alternativ i olika prisklasser. Suunto är ett etablerat finskt märke med lång historia inom dykning; Shearwater är ett kanadensiskt företag som dominerar teknisk dykning med sina mer konfigurerbara modeller Teric och Perdix; Garmin kombinerar dykning med multisport och GPS i ett och samma armbandsur.
 
-En dykare som regelbundet dyk djupa vrak i Europa, med nitrox och ibland tekniska konfigurationer, behöver mer: nitrox-hantering, möjlighet till gasblandningsväxling under dyket (för dekogas), djupare data-logging och kanske trimix-kapacitet. Shearwater Teric eller Ratio iX3M är relevanta i det segmentet.
+En dykare som regelbundet dyker djupa vrak i Nordeuropa — med nitrox och ibland tekniska konfigurationer — behöver mer: nitroxhantering, möjlighet till gasblandningsväxling under dyket, djupare dataloggning och möjligen trimixkapacitet. Shearwater Teric eller Ratio iX3M är relevanta i det segmentet.
 
-Batteritid och laddning är underskattade faktorer. En dator som laddas via micro-USB är enklare på resande fot än en som kräver specialladdare. En del modeller arbetar med ersättningsbatterier av standardformat (CR2430), vilket ger obegränsad tillgänglighet.
-
-[Öppna kartan](/map) för att utforska dykplatser och planera din nästa resa med rätt utrustning.
+Batteritid och laddning är underskattade faktorer. En dator som laddas via USB-C är enklare på resande fot än en som kräver specialladdare. Vissa modeller arbetar med standardbatterier av typ CR2430 eller CR2450, vilket ger nästan obegränsad tillgänglighet globalt.
 
 ## Skärm och avläsbarhet
 
-I turkost, klart vatten är en skärm lätt att läsa. I dunkelt grönaktigt vatten på 30 meters djup, med en handske på, under en briefing om strömmen, är läsbarhet avgörande. Stora siffror, hög kontrast och bakgrundsbelysning som aktiveras automatiskt är väl investerade detaljkrav. Shearwaters skärmar är i branschen välkända för sin tydlighet.
+I turkost, klart vatten är en skärm lätt att läsa. I grönaktigt, mörkt vatten på 30 meters djup, med en handske på, under ett kort briefingfönster om strömmen, är läsbarhet avgörande. Stora siffror, hög kontrast och bakgrundsbelysning som aktiveras automatiskt vid lågt ljus är väl investerade krav. Shearwaters AMOLED-skärm på TERIC är välkänd i branschen för sin tydlighet; Garmin Descent Mk3 erbjuder en stor rund display med utmärkt läsbarhet i solljus.
 
-## Datalogging och analys
+## Dataloggning och analys
 
-Moderna dykatorer lagrar hundratals dyk med fullständig djupprofil, temperaturkurva och gasdata. Programvaror som Subsurface (öppen källkod), MacDive och Garmin Dive App låter dykaren analysera profilen efter dyket, kontrollera NDL-marginaler och exportera data till dykloggar. Att analysera sina egna dykprofiler är ett underskattat sätt att förbättra sin djuphantering och gaseffektivitet.
+Moderna dykatorer lagrar hundratals dyk med fullständig djupprofil, temperaturkurva och gasdata. Program som Subsurface (öppen källkod och gratis), MacDive och Garmin Dive App låter dykaren analysera profilen efter dyket, kontrollera NDL-marginaler och exportera data till digitala dykloggar. Att gå igenom sina egna profiler är ett underskattat sätt att förbättra djuphantering och gaseffektivitet — ett stigande luftförbrukning över tid kan signalera ökad stress eller ett tekniskt problem med utrustningen.
+
+## Underhåll och programvaruuppdateringar
+
+En dykator kräver lite skötsel men den är viktig. Skölj alltid datorn i sötvatten efter varje dyk i saltvatten och låt den torka skyddad från direkt solljus. O-ringarna kring knappar och batterifack bör kontrolleras regelbundet och smörjas med silikongrease — spruckna eller uttorkade O-ringar är den vanligaste orsaken till vattenintrång i dykatorer. Byt batteriet i god tid inför en dykresa, inte mitt under den; en dator med svagt batteri kan ge felaktiga djup- eller NDL-avläsningar.
+
+Tillverkare som Shearwater, Suunto och Garmin släpper regelbundna firmwareuppdateringar som ibland även justerar algoritmparametrar baserat på ny klinisk forskning. Det är värt att köra en uppdatering innan en längre dykresa. Shearwaters uppdateringar distribueras gratis via datorprogrammet Shearwater Cloud.
+
+[Öppna kartan](/map) för att utforska dykplatser och planera din nästa resa med rätt utrustning för just det djup- och profilmönster som väntar.
